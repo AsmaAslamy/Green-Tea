@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GreenTea Shop</title>
+
+<!-- 🌿 Icon link -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+<!--  🌿 font icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+<!--  🌿 CSS LINK -->
+<link rel="stylesheet" href="style.css">
+ 
+
+</head>
+<body>
+
+<!-- 🌿 Top Bar -->
+<div class="top-bar">
+  FREE SHIPPING ON ALL U.S. ORDERS $50+
+</div>
+
+<!-- 🌿 Navbar -->
+<header class="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">GreenTea</a>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="ri-menu-line"></i>
+    </div>
+
+<nav class="nav-links" id="nav-links">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#shop">Shop</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+    <div class="right-section">
+      <div class="search-box">
+        <input type="text" placeholder="Search product">
+        <i class="ri-search-line"></i>
+      </div>
+      <div class="search-results"></div>
+      <div class="nav-icons">
+        <!-- <button id="logout"><i class="ri-user-line"></i></button> -->
+        <i id="logout" class="ri-user-line"></i>
+        <!-- <div id="heart-icon"> -->
+            <i class="ri-star-line" id="heart-icon"></i>
+        <!-- </div> -->
+        <div id="cart-icon">
+          <i class="ri-shopping-bag-line"></i>
+          <span class="cart-item-count"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 🌿 Buy Div -->
+ <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <!-- <div class="cart-box">
+                <img src="../first-1.webp" alt="" class="cart-img">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Casual Black Polo</h2>
+                    <span class="cart-price">$100</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+                <i class="ri-delete-bin-6-line cart-remove"></i>
+            </div> -->
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+        </div>
+        <button class="btn-buy">Buy Now</button>
+        <i class="ri-close-large-fill" id="cart-close"></i>
+</div>
+
+<!-- 🌿 پنجره heart -->
+<div class="heart">
+    <h2 class="heart-title"><i class="ri-home-heart-fill"></i>Favorites</h2>
+    <div class="heart-content">
+        <!-- کارت‌های اضافه شده اینجا ظاهر می‌شوند -->
+    </div>
+    <i class="ri-close-large-fill" id="heart-close"></i>
+</div>
+
+<!-- 🌿 Camera -->
+<div id="starModal" class="modal">
+    <span class="close">&times;</span>
+    <img id="modalImg" src="" alt="Favorite">
+</div>
+
+<!-- 🌿 Section 1  Home -->
+<div id="curlZillSlider">
+  <div class="slide active">
+    <div class="overlay">
+      <h1>Green Tea: Your Drink of Health and Calm.</h1>
+    </div>
+  </div>
+  <div class="slide first-slide">
+    <div class="overlay">
+      <h1>Natural, full of antioxidants, and energizing for your day.</h1>
+    </div>
+  </div>
+  <div class="slide second-2">
+    <div class="overlay">
+      <h1>Experience the taste and benefits of green tea today.</h1>
+    </div>
+  </div>
+</div>
+
+<!-- 🌿 About us  -->
+ <section class="about-section" id="about">
+  <div class="about-header">
+    <h2>Who we are?</h2>
+    <div class="green-line"></div>
+    <p class="about-text">
+      We are a passionate green tea company dedicated to improving people’s lives 
+      through healthy, natural, and high-quality products. 
+      Our mission is to blend nature and innovation for a better tomorrow.
+    </p>
+  </div>
+
+  <div class="about-content">
+    <div class="about-image">
+      <img src="https://img.freepik.com/premium-photo/painting-girl-with-green-hair-flower-her-head_327903-1036786.jpg" alt="Green Tea">
+    </div>
+
+    <div class="about-info">
+      <div class="info-box">
+        <div class="icon"><i class="ri-user-5-fill"></i></div>
+        <div>
+          <h3>Our Mission</h3>
+          <p>Improving quality of life through innovation, diversity, and smart agriculture management.</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="icon"><i class="ri-stack-fill"></i></div>
+        <div>
+          <h3>Our Vision</h3>
+          <p>To create a healthier world where nature and people thrive together.</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="icon"><i class="ri-service-fill"></i></div>
+        <div>
+          <h3>Our Values</h3>
+          <p>Integrity, respect for nature, and commitment to sustainable growth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🌿 Cart section -->
+<section class="shop" id="shop">
+    <h1 class="section-title">Shop Products</h1>
+    <div class="product-content">
+
+        <div class="product-box">
+            <div class="img-box">
+                <img src="MyFinalImag/shop-1.jpg" alt="Matcha Tea">
+            </div>
+            <h1 class="product-title">Matcha Tea</h1>
+            
+            <div class="price-and-cart">
+                <span class="price">$29.0</span>
+                <i class="ri-shopping-bag-line add-cart"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-eye-line view-details" title="View Details"></i>
+            </div>
+
+            <div class="review">
+                <span><i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                </span> 5170 reviews
+            </div>
+
+        </div>
+
+        <div class="product-box">
+            <div class="img-box">
+                <img src="MyFinalImag/shop-2.jpg" alt="Sencha Tea">
+            </div>
+            <h1 class="product-title">Sencha Tea</h1>
+            
+            <div class="price-and-cart">
+                <span class="price">$20.0</span>
+                <i class="ri-shopping-bag-line add-cart"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-eye-line view-details" title="View Details"></i>
+            </div>
+
+            <div class="review">
+                <span><i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                </span> 5170 reviews
+            </div>
+
+        </div>
+
+        <div class="product-box">
+            <div class="img-box">
+                <img src="MyFinalImag/shop-3.jpg" alt="Gunpowder Tea">
+            </div>
+            <h1 class="product-title">Gunpowder Tea</h1>
+            
+            <div class="price-and-cart">
+                <span class="price">$18.0</span>
+                <i class="ri-shopping-bag-line add-cart"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-eye-line view-details" title="View Details"></i>
+            </div>
+
+            <div class="review">
+                <span><i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                </span> 5170 reviews
+            </div>
+
+        </div>
+
+        <div class="product-box">
+            <div class="img-box">
+                <img src="MyFinalImag/shop-4.jpg" alt="Genmaicha Tea">
+            </div>
+            <h1 class="product-title">Genmaicha Tea</h1>
+            
+            <div class="price-and-cart">
+                <span class="price">$12.0</span>
+                <i class="ri-shopping-bag-line add-cart"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-eye-line view-details" title="View Details"></i>
+            </div>
+
+            <div class="review">
+                <span><i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                </span> 5170 reviews
+            </div>
+
+        </div>
+
+        <div class="product-box">
+            <div class="img-box">
+                <img src="MyFinalImag/shop-5.jpg"alt="Gyokuro Tea">
+            </div>
+            <h1 class="product-title">Gyokuro Tea</h1>
+            
+            <div class="price-and-cart">
+                <span class="price">$15.0</span>
+                <i class="ri-shopping-bag-line add-cart"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-eye-line view-details" title="View Details"></i>
+            </div>
+
+            <div class="review">
+                <span><i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                </span> 5170 reviews
+            </div>
+
+        </div>
+
+        <div class="product-box">
+            <div class="img-box">
+                <img src="MyFinalImag/shop-6.jpg" alt="Mao Feng Tea">
+            </div>
+            <h1 class="product-title">Mao Feng Tea</h1>
+            
+            <div class="price-and-cart">
+                <span class="price">$16.0</span>
+                <i class="ri-shopping-bag-line add-cart"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-eye-line view-details" title="View Details"></i>
+            </div>
+
+            <div class="review">
+                <span><i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                </span> 5170 reviews
+            </div>
+
+        </div>
+
+        <div class="product-box">
+            <div class="img-box">
+                <!-- <img src="https://cha-wu.com/cdn/shop/files/BV8A5119_1024x1024@2x.jpg?v=1701075719" alt="Long Jing Tea"> -->
+                <img src="MyFinalImag/shop-7.jpg" alt="Long Jing Tea">
+            </div>
+            <h1 class="product-title">Long Jing Tea</h1>
+            
+            <div class="price-and-cart">
+                <span class="price">$14.0</span>
+                <i class="ri-shopping-bag-line add-cart"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-eye-line view-details" title="View Details"></i>
+            </div>
+
+            <div class="review">
+                <span><i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                </span> 5170 reviews
+            </div>
+
+        </div>
+
+        <div class="product-box">
+            <div class="img-box">
+                <img src="MyFinalImag/shop-8.jpg" alt="Bancha Tea">
+            </div>
+            <h1 class="product-title">Bancha Tea</h1>
+            
+            <div class="price-and-cart">
+                <span class="price">$19.0</span>
+                <i class="ri-shopping-bag-line add-cart"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-eye-line view-details" title="View Details"></i>
+            </div>
+
+            <div class="review">
+                <span><i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                </span> 5170 reviews
+            </div>
+
+        </div>
+
+        
+    </div>
+</section>
+
+
+<!-- 🌿 Benefits  -->
+ <section class="health-section" aria-label="Green Tea Health Benefits" id="benefits">
+  <h2>Green Tea Health Benefits</h2>
+  <div class="benefits-list">
+
+    <div class="benefit">
+      <div class="icon icon-leaf" aria-hidden="true"><i class="ri-leaf-fill"></i></div>
+      <h3>Powerful Antioxidants</h3>
+      <p>Green tea is rich in catechins that fight free radicals and protect cell health.</p>
+    </div>
+
+    <div class="benefit">
+      <div class="icon icon-heart" aria-hidden="true"><i class="ri-user-heart-fill"></i></div>
+      <h3>Heart Health</h3>
+      <p>Regular consumption of green tea helps reduce bad cholesterol and improve heart function.</p>
+    </div>
+
+    <div class="benefit">
+      <div class="icon icon-fire" aria-hidden="true"><i class="ri-fire-fill"></i></div>
+      <h3>Weight Management</h3>
+      <p>Green tea boosts metabolism and fat burning, aiding in weight control.</p>
+    </div>
+
+    <div class="benefit">
+      <div class="icon icon-brain" aria-hidden="true"><i class="ri-brain-2-fill"></i></div>
+      <h3>Improved Focus and Calm</h3>
+      <p>Caffeine and L-theanine in green tea enhance focus and reduce stress.</p>
+    </div>
+
+  </div>
+
+  <a href="#shop" class="cta-button" aria-label="Buy Green Tea">Buy Green Tea</a>
+</section>
+
+
+
+
+<!-- 🌿 Reviews -->
+    <section class="section-4 " id="reviews">
+      <div class="wrapper p-top flex gap">
+        <div class="image-container">
+          <img class="image" src="MyFinalImag/profil.jpg" alt="A Cup of Tea">
+        </div>
+
+        <div class="content review-container">
+          <h5 class="review-title">our reviews</h5>
+          <h2 class="review-h2">what they say?</h2>
+
+          <!-- <div class="review-container"> -->
+            <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+
+
+                <div class="flex ">
+                  <div class="profile">
+                    <img src="MyFinalImag/profil-1.jpg" alt="">
+                  </div>
+                  <div class="swiper-div">
+                    <h4 class="review-h4">Emma</h4>
+                    <div class="mt-half">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="para">The flavor of this green tea is so smooth and refreshing. It’s not bitter at all, unlike some other green teas I’ve tried before. I usually drink it in the afternoon and it really helps me relax.</p>
+              </div>
+
+              <div class="swiper-slide">
+
+                <div class="flex ">
+                  <div class="profile">
+                    <img src="MyFinalImag/profil-2.jpg" alt="">
+                  </div>
+                  <div class="swiper-div">
+                    <h4 class="review-h4">Sophia</h4>
+                    <div class="mt-half">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="para">The quality of this green tea is excellent. The leaves look fresh and natural, and the color of the brewed tea is clear and vibrant. It has no artificial smell, just a clean, earthy aroma. I can tell it’s pure.</p>
+              </div>
+
+              <div class="swiper-slide">
+
+                <div class="flex ">
+                  <div class="profile">
+                    <img src="MyFinalImag/profil-3.jpg" alt="">
+                  </div>
+                  <div class="swiper-div">
+                    <h4 class="review-h4">James</h4>
+                    <div class="mt-half">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="para">The leaves are well-processed and open up beautifully when steeped, which is a good sign of traditional and careful production. The packaging preserves the freshness and aroma really well.</p>
+              </div>
+
+              
+
+            </div>
+            <div class="flex between">
+              <a href="#" class="arrow" id="prev">
+                <i class="fa-solid fa-arrow-left"></i>
+              </a>
+              <a href="#" class="arrow" id="next">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <!-- </div> -->
+
+        </div>
+      </div>
+    </section>
+
+
+<!-- =============== FOOTER SECTION =============== -->
+  <footer id="contact">
+    <div class="company">
+      <h4>Company</h4>
+      <p>Find a location nearest you. See <a href="#">Our Stores</a></p>
+      <p>+391 (0)35 2568 4593</p>
+      <p>Asmahaslamy@gimal.com</p>
+      <div class="social">
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="useful-links">
+      <h4>Useful Links</h4>
+      <a href="#">New Products</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">Bundle & Save</a>
+      <a href="#">Online Gift Card</a>
+    </div>
+
+<div class="information">
+      <h4>Information</h4>
+      <a href="#">Start a Return</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Shipping FAQ</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="emails">
+      <h4>Good emails.</h4>
+      <p>Enter your email below to be the first to know about new collections and product launches.</p>
+      <div class="email-box">
+        <input type="email" id="emailInput" placeholder="Enter your email address">
+        <button id="subscribeBtn">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    © 2025 This code was written by | Asma Aslami.
+  </div>
+
+
+<!-- 🌿 JS -->
+<script src="script.js"></script>
+
+
+<!-- swiper link  -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+<script>
+    'use strict';
+
+    var swiper = new Swiper(".mySwiper", {
+      loop: true ,
+      navigation: {
+        nextEl: "#prev",
+        prevEl: "#next",
+        // nextEl: "#next",
+        // prevEl: "#prev",
+      },
+    });
+</script>
+
+
+</body>
+</html>

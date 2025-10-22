@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="form.css">
+    <title>login Page</title>
+</head>
+<body>
+    <!-- <div>
+    <h2>login</h2>
+    </div> -->
+    <div class="overlay hidden"></div>
+    <form action="" id="loginForm" class="overlay-form hidden-form">
+
+        <div class="overlay hidden"></div>
+        <h1>Login</h1>
+
+        <div class="input-box">
+        <!-- <label for="">Username</label> -->
+        <input type="text" id="username" placeholder="Username"  required> 
+        <i class='bx bxs-user'></i>
+        </div>
+
+        <div class="input-box">
+        <!-- <label for="">Password</label> -->
+        <input type="password" id="password" placeholder="Password" required> 
+        <i class='bx bxs-lock-alt' ></i>
+        </div>
+
+        <!-- <div class="remember-forgot ">
+            <label for=""><input type="checkbox">Remember Me</label>
+            <a href="#">Forgot Password?</a>
+        </div> -->
+        <div class="remember-forgot ">
+            <label for=""><input 
+            type="checkbox">Remember Me</label>
+            <a href="#" class="show-modal">Forgot Password?</a>
+            <!-- <div class="overlay hidden"></div> -->
+        </div>
+        
+        <div >
+        <button type="submit" class="btn">Login</button>       
+        </div>
+
+        <div>
+        <p id="maessage"></p>
+        </div>
+
+
+        <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <!-- <h1>I'm a Modal Window!</h1> -->
+        <p >
+            <h3>To log in:</h3> <br> Write <b>(admin)</b> in the username field and <b>(1234)</b> in the password field!
+        </p>
+    </div>
+    <!-- <div class="overlay hidden"></div> -->
+    </form>
+    
+
+     <script> 
+        const setCookie = (name , value, seconds) =>{
+            const expires = new Date(Date.now() + seconds * 1000).toUTCString();
+            document.cookie = `${name} = ${value}; expires=${expires}; path=/ `;
+        };
+
+        const getCookie = (name)=>{
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies){
+                const [key , value] = cookie.split('=');
+                if (key === name) return value ;
+            } 
+            return null ;
+        }
+
+
+document.getElementById('loginForm').addEventListener("submit" , (e)=>{
+            e.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            if ( username === "admin" && password === "1234"){
+                setCookie("username" , username , 3600);
+                localStorage.setItem("username", username);
+                document.getElementById("maessage").textContent = "Login successfuly"
+                setTimeout(()=>{ window.location.href = "index.html"} , 1000)
+            }else{
+                document.getElementById("maessage").textContent = "invalid credentials!"
+            }
+        });
+        window.onload = ()=>{
+            const cookieUser = getCookie("username");
+            const localUser = localStorage.getItem("username");
+            if (cookieUser || localUser){
+                window.location.href = "index.html"
+            }
+        }
+
+        'use strict'
+        const modal = document.querySelector(".modal")
+        const overlay = document.querySelector(".overlay")
+        const close_modal = document.querySelector(".close-modal")
+        const show_modal = document.querySelector(".show-modal")
+        const overlay_form = document.querySelector(".overlay-form");
+        
+        const displayModel = ()=>{
+            modal.classList.remove("hidden");
+            overlay.classList.remove("hidden");
+            overlay_form.classList.remove("hidden")
+            overlay_form.classList.remove("hidden-form");
+
+        }
+        show_modal.addEventListener("click" , displayModel)
+
+        const hideModal = ()=> {
+            modal.classList.add("hidden");
+            overlay.classList.add("hidden");
+            overlay_form.classList.add("hidden-form");
+        };
+        close_modal.addEventListener("click" , hideModal);
+        overlay.addEventListener("click" , hideModal);
+
+        document.addEventListener("keydown" , (event) =>{
+            if(event.key == "Escape" && !modal.classList.contains("hidden")){
+                hideModal();
+            }
+        });
+    </script>
+    
+ </body>
+</html>
